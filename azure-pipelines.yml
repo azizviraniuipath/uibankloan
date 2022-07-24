@@ -16,10 +16,10 @@ steps:
 
 - task: UiPathTest@2
   inputs:
-    testTarget: 'TestProject'
+    testTarget: 'TestSet'
     orchestratorConnection: 'UiPathConnection'
+    testSet: 'SmallLoanTestSets'
     folderName: 'Shared'
-    traceLevel: 'Information'
   env:
     OrchestratorClientIdOverride: '$(ClientId)'
     OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'

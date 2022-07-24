@@ -1,0 +1,12 @@
+{
+  "issueKeyTestcaseValues": {
+    "97f6af08-9e81-4197-afbd-ec2c4dd76b5b": "d5c34f60-a5f3-403f-9834-08d7e74cbdbf",
+    "1449f64c-f651-47e4-95b3-4776b6284a85": "d44b4269-fc16-4023-a07d-08d7e7660063"
+  },
+  "testManagerBasePath": "https://staging.uipath.com/azizvirani/DefaultTenant/testmanager_/",
+  "defaultProject": {
+    "id": "fba28b2d-4018-0000-8147-0b4434a3e21f",
+    "name": "UiBank Loan Testing",
+    "key": "UBLT"
+  }
+}

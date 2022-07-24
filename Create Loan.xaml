@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Create_Loan" this:Create_Loan.LoanEmail="emerald.koe@gmail.com" this:Create_Loan.LoanAmount="40000" this:Create_Loan.LoanTerm="5" this:Create_Loan.LoanIncome="30000" this:Create_Loan.LoanAge="35" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Create_Loan" this:Create_Loan.LoanEmail="emerald.koe@gmail.com" this:Create_Loan.LoanAmount="40000" this:Create_Loan.LoanTerm="5" this:Create_Loan.LoanIncome="30000" this:Create_Loan.LoanAge="35" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="LoanEmail" Type="InArgument(x:String)" />
     <x:Property Name="LoanAmount" Type="InArgument(x:String)" />
@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>950,2652</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>950,2561</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Create_Loan_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="44">
@@ -72,7 +72,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap:VirtualizedContainerService.HintSize="476,2587" sap2010:WorkflowViewState.IdRef="Sequence_7">
+  <Sequence sap:VirtualizedContainerService.HintSize="476,2496" sap2010:WorkflowViewState.IdRef="Sequence_7">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="https://uibank.uipath.com/" Name="UiBankWeb" />
     </Sequence.Variables>
@@ -82,20 +82,19 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard CloseMode="{x:Null}" OpenMode="{x:Null}" DisplayName="Use Browser Chrome: UiBank" sap:VirtualizedContainerService.HintSize="434,2495" sap2010:WorkflowViewState.IdRef="NApplicationCard_1">
+    <uix:NApplicationCard CloseMode="{x:Null}" OpenMode="{x:Null}" DisplayName="Use Browser Chrome: UiBank" sap:VirtualizedContainerService.HintSize="434,2404" sap2010:WorkflowViewState.IdRef="NApplicationCard_1">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,2239" sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,2148" sap2010:WorkflowViewState.IdRef="Sequence_8">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Test&quot;]" />
             <uix:NClick ClickType="Single" DisplayName="Click 'A  navbarDropdown'" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://uibank.uipath.com/" DesignTimeRectangle="1352, 102, 104, 40" ElementType="Text" FriendlyName="'A  navbarDropdown'" FullSelectorArgument="&lt;html app='chrome.exe' title='UiBank' /&gt;&lt;webctrl id='navbarDropdown' tag='A' /&gt;" FuzzySelectorArgument="&lt;html app='chrome.exe' title='UiBank' /&gt;&lt;webctrl id='navbarDropdown' tag='A' type='' aaname=' Products ' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGwAAAAsCAYAAACAPl2hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAS1SURBVHhe7Zg/ayNHGIfzGY5Dn0EYN4Y7ODAHhhQn3MgcAsMFFKzCGBELpRCoiJALYSfBYoszd4XtFDHWYcQWwSpMLAhom0MqjGw4sCv74IotDFu4WLjil3f+rLy7Wida21IYMg8saGdnd3beZ+adWX0DjVJoYYqhhSmGFqYYWphiaGGKoYUphhamGFqYYmhhiqGFKYYWphhamGJoYYqhhSlGLGGu48AJHe5XeXEinGIn8xqVI1ue//+IIcxGM5fAk6ehY4oF8ErWGTc91KnNrDkuYaKP43v+w4kvbLMnzxkuLg9WkHw6j60zWTRWtLAHCmOcYmsugfTvYpbZR1WkM7vow0F3u4xsqojmF36JcHDeMlCgtJZmR66MrdYFlQ7jfGqhvnpbb8diQQwK4239dExvFiYqddLgau+ilJPPzBRR97dtH6NC5S+mEki+lHV8z7Yt3725Kpqfot46msaHD8OZyXfkf1iVNf+dRxB2hb1MAnPvT/mZbS7RSxRRKk1jJrWE0sY+urxvV2jmp3kKLWy30LEsHG4XkWYBypu45HcL7D/YrE1gJmeg2bbQaZuo52axbJqoUflAGGsrZ0YIC89EF93N+WDbjSqyz31tuzb6Vgs16kt6Q9TpnNh0J12y1pGcWsFO74rWbZsG3TpeUVap99jV0bhLWhxZjAcLcz4a9PLTqFni5YUwClYjuK6J8iU0P8sCj88mslS/0JIj1rVQI4mvqJ1gOCjoxmsuMq4wHvCoAIfbln28FS3oblK/a5Y8E/Tffosn+VZE23cTlhZXFiO+sOfzMqXQsTBLgZhG2rgNrhBTRScQGxuHebp3zQpJYLjorNG10rFITycGPTNCLOOLCHBcYX2DZvb3wVkscGGf0Ey6+GdhTrvMZ9jeGe2KZdl98aTdRxYjvrAfd0W64EcP59fBLghhBrryXHCKOs2acCA8+AiWgWfpcPh+j9AaNpIwOViGUnkU0cKYWL72pp5RWp1FerWKvTalR3k1Lj//8qv8FZ9HWMOCRAsT9yYNsc6F6W7Qc7300jPo/hUcDlugoX6MUlhYZj9i5vQCax0fEHekL/5teSNP7hTmw3Vw2dtHKUVpm/rz0BkXlwkJA863adGfW0d3EBzJjYUKzb5Fb827bqHAgn0w/G13ecCe7RPGZ2MRh9f89Jazd5jz1XOOylQvIs2G25Z99DZQHv3f3gTSPsP9qxrZz3EzMWG4oTRFozK5QOmE77bESK0s0PqSovo+kf33JJc2CaVGD5f8H5UrdBv0iWAYqPhE4JpmHN9l7qNvs3C6cM5MVGplIX0wU+QONVUetG1fHKP+XbhtWk9rrGwdzTNWTyqiAcB2hbW29zwHnQ3adESm4/EyOWEM5wLNtTeYoWCKndIzLK6ZOB9aDBz0G2LL79XLvu1RaXANY7gX+yi8pCDzetN4sUzfgGxwhOrhRrTNvrMGbZdIdLjta4tEss0U1fEJcT6+w/KgHfrkWKziz6iN0ZiJIexxcW9GzP7uaPX4WjTqI0etGMVXd8L/nwb5z4Rp7ocWphhamGJoYYqhhSmGFqYYWphiaGGKoYUphhamGFqYYmhhiqGFKYYWphhamGJoYUoB/A1go6KrAbG0XQAAAABJRU5ErkJggg==" InformativeScreenshot="523a263f00cfc0fbbb68698a6132ce6c.png" SearchSteps="FuzzySelector, Image">

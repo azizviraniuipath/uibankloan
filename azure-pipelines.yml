@@ -27,9 +27,8 @@ steps:
 
 - task: UiPathTest@2
   inputs:
-    testTarget: 'TestSet'
+    testTarget: 'TestProject'
     orchestratorConnection: 'UiPathConnection'
-    testSet: 'SmallVolumeLoan'
     folderName: 'Shared'
     traceLevel: 'Information'
   env:

@@ -12,7 +12,7 @@ pool:
 variables:
  - group: Variables
 
-
+steps:
 - task: UiPathRunJob@2
   inputs:
         orchestratorConnection: 'UiPathConnection'
@@ -22,5 +22,5 @@ variables:
         machine: 'DESKTOP-8SI53PP'
         traceLevel: 'Information'
   env:
-    OrchestratorClientIdOverride: '$(ClientId)'
-    OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'
+     OrchestratorClientIdOverride: '$(ClientId)'
+     OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'

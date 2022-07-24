@@ -7,14 +7,20 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'windows-latest'
 
+variables:
+ - group: Variables
 
-    - task: UiPathTest@2
-      inputs:
-        testTarget: 'TestSet'
-        orchestratorConnection: 'UiPathConnection'
-        folderName: '$(FolderName)'
-    env:
-       OrchestratorClientIdOverride: '$(ClientId)'
-       OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'
+ - task: UiPathRunJob@2
+   inputs:
+     orchestratorConnection: 'UiPathConnection'
+     processName: 'Message Box'
+     folderName: '$(FolderName)'
+     user: 'uipath\aziz.virani'
+     machine: 'DESKTOP-8SI53PP'
+     traceLevel: 'Information'
+
+  env:
+    OrchestratorClientIdOverride: '$(ClientId)'
+    OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'

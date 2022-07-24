@@ -14,17 +14,6 @@ variables:
 
 steps:
 
-- task: UiPathPack@2
-  inputs:
-    versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)'
-    orchestratorConnection: 'UiPathConnection'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-    traceLevel: 'Information'
-  env:
-    OrchestratorClientIdOverride: '$(ClientId)'
-    OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'
-
 - task: UiPathTest@2
   inputs:
     testTarget: 'TestProject'

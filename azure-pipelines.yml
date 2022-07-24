@@ -14,14 +14,24 @@ variables:
 
 steps:
 
-- task: UiPathRunJob@2
+- task: UiPathPack@2
   inputs:
+    versionType: 'AutoVersion'
+    projectJsonPath: '$(Build.SourcesDirectory)'
     orchestratorConnection: 'UiPathConnection'
-    processName: 'Message Box'
-    folderName: '$(FolderName)'
-    strategy: 'Specific'
-    robotsIds: 'Aziz Virani'
-
+    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    traceLevel: 'Information'
   env:
-     OrchestratorClientIdOverride: '$(ClientId)'
-     OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'
+    OrchestratorClientIdOverride: '$(ClientId)'
+    OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'
+
+- task: UiPathTest@2
+  inputs:
+    testTarget: 'TestSet'
+    orchestratorConnection: 'UiPathConnection'
+    testSet: 'SmallVolumeLoan'
+    folderName: 'Shared'
+    traceLevel: 'Information'
+  env:
+    OrchestratorClientIdOverride: '$(ClientId)'
+    OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'

@@ -13,14 +13,15 @@ variables:
  - group: Variables
 
 steps:
+
 - task: UiPathRunJob@2
   inputs:
-        orchestratorConnection: 'UiPathConnection'
-        processName: 'Message Box'
-        folderName: '$(FolderName)'
-        user: 'uipath\aziz.virani'
-        machine: 'DESKTOP-8SI53PP'
-        traceLevel: 'Information'
+    orchestratorConnection: 'UiPathConnection'
+    processName: 'Message Box'
+    folderName: '$(FolderName)'
+    strategy: 'Specific'
+    robotsIds: 'Aziz Virani'
+
   env:
      OrchestratorClientIdOverride: '$(ClientId)'
      OrchestratorAuthorizationUriOverride: '$(AuthUriOverride)'
